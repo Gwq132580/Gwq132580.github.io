@@ -16,7 +16,7 @@
 <meta property="og:description" content="less简单用法:    样式嵌套、定义变量 webpack用法: webpack.config.js 配置打包入口和打包出口、配置loader（css-loader style-loader babel-loader（处理es6,7））、配置插件( HtmlWebpackPlugin (自动生成html文件， 将打包好的js文件，自动通过script标签插入到body中 )) vue路由的两种模">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-08-03T10:24:36.000Z">
-<meta property="article:modified_time" content="2020-08-03T12:47:01.539Z">
+<meta property="article:modified_time" content="2020-08-03T12:59:26.415Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -188,6 +188,14 @@
 
 <p>发布者-订阅者模式</p>
 <p> 例如：div绑定点击事件，监听用户动作，但是我们并不知道用户什么时候点击。所以我们订阅了click事件，当body节点被点击时发布者body就向订阅者（整个这段程序就是一个订阅者）发布这个消息。 </p>
+<p>生产者和消费者问题</p>
+<p> <strong>生产者消费者模式</strong>就是<strong>通过一个容器来解决生产者和消费者的强耦合问题</strong>。<strong>生产者和消费者彼此之间不直接通讯，而通过阻塞队列来进行通讯</strong>，所以生产者生产完数据之后不用等待消费者处理，直接扔给阻塞队列，消费者不找生产者要数据，而是直接从阻塞队列里取，阻塞队列就相当于一个缓冲区，平衡了生产者和消费者的处理能力。这个阻塞队列就是<strong>用来给生产者和消费者解耦的</strong>。 </p>
+<p>优点：</p>
+<ul>
+<li>生产者，消费者之间不直接通信，降低了耦合度 </li>
+<li>支持并发</li>
+<li>支持忙闲不均</li>
+</ul>
 
       
 
