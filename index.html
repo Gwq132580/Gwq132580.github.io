@@ -152,6 +152,99 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-面试总结1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/08/04/%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%931/">面试总结1</a>
+    </h1>
+  
+
+        
+        <a href="/2020/08/04/%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%931/" class="archive-article-date">
+  	<time datetime="2020-08-04T08:43:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="node爬虫ip被封如何处理"><a href="#node爬虫ip被封如何处理" class="headerlink" title="node爬虫ip被封如何处理"></a>node爬虫ip被封如何处理</h4><ul>
+<li>伪造ip和请求头</li>
+<li>构建一个私人ip代理池， 从各大代理ip网站爬取收集免费的代理ip，然后一一进行测试，从中筛选出高速可用的ip </li>
+</ul>
+<h4 id="new-RegExp和-的区别"><a href="#new-RegExp和-的区别" class="headerlink" title="new RegExp和 //的区别"></a>new RegExp和 //的区别</h4><ul>
+<li>new RegExp可以直接写/ 而不用 \ / 进行转义</li>
+<li>注意正则是对象</li>
+</ul>
+<h4 id="文件上传"><a href="#文件上传" class="headerlink" title="文件上传"></a>文件上传</h4><ul>
+<li>利用input type=file 设置accpet解决卡顿问题</li>
+<li>将input隐藏，通过一个绑定了点击事件的button去触发input,实现只能拍照上传</li>
+</ul>
+<h4 id="单例模式"><a href="#单例模式" class="headerlink" title="单例模式"></a>单例模式</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="comment">//一个类只有一个实例对象</span></span><br><span class="line">            <span class="keyword">if</span> (Person._instance) &#123;</span><br><span class="line">                <span class="keyword">return</span> Person._instance;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">&#x27;第一次创建对象&#x27;</span>);</span><br><span class="line">            Person._instance = <span class="built_in">this</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">var</span> p1 = <span class="keyword">new</span> Person();</span><br><span class="line">        <span class="keyword">var</span> p2 = <span class="keyword">new</span> Person();</span><br><span class="line">        <span class="built_in">console</span>.log(p1 === p2); <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="装饰器的基本使用"><a href="#装饰器的基本使用" class="headerlink" title="装饰器的基本使用"></a>装饰器的基本使用</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;为对象添加新功能，不改变其原有的结构和功能</span><br><span class="line">@Add</span><br><span class="line">@AddInstance</span><br><span class="line"></span><br><span class="line">class Test &#123;&#125;</span><br><span class="line">function Add(target) &#123;</span><br><span class="line">  &#x2F;&#x2F; 给类添加静态方法</span><br><span class="line">  target.hello &#x3D; &quot;world&quot;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">function AddInstance(target)&#123;</span><br><span class="line">  target.prototype.sing&#x3D;()&#x3D;&gt;console.log(&#39;这是实例方法&#39;);</span><br><span class="line">&#125;</span><br><span class="line">console.log(Test.hello);</span><br><span class="line">new Test().sing()</span><br></pre></td></tr></table></figure>
+
+<h4 id="进程和线程"><a href="#进程和线程" class="headerlink" title="进程和线程"></a>进程和线程</h4><p> 进程是分配内存的最小单位，线程是CPU调度的最小单位，进程可以包含多个线程 </p>
+<h4 id="数组和链表数据结构"><a href="#数组和链表数据结构" class="headerlink" title="数组和链表数据结构"></a>数组和链表数据结构</h4><ul>
+<li><p>数组是连续的，链表不要求连续</p>
+</li>
+<li><p>数组查找速度快，插入慢，可能会浪费内存</p>
+</li>
+<li><p>链表查找速度慢，插入速度快，不会浪费内存，链表比较灵活</p>
+</li>
+</ul>
+<h4 id="v-for和v-if一起使用会导致v-if失效-v-for优先级较高"><a href="#v-for和v-if一起使用会导致v-if失效-v-for优先级较高" class="headerlink" title="v-for和v-if一起使用会导致v-if失效,v-for优先级较高"></a>v-for和v-if一起使用会导致v-if失效,v-for优先级较高</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">10</span>;</span><br><span class="line">         a.pro = <span class="number">10</span>;</span><br><span class="line">      <span class="built_in">console</span>.log(a); <span class="comment">//10</span></span><br><span class="line">      <span class="built_in">console</span>.log(a.pro); <span class="comment">//undefined</span></span><br><span class="line">      <span class="built_in">console</span>.log(a.pro + a); <span class="comment">//NaN</span></span><br><span class="line">      <span class="keyword">var</span> s = <span class="string">&#x27;hello&#x27;</span>;</span><br><span class="line">      s.pro = <span class="string">&#x27;world&#x27;</span>;</span><br><span class="line">      <span class="built_in">console</span>.log(s.pro + s); <span class="comment">//undefinedhello</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var test &#x3D; (function(a) &#123;</span><br><span class="line">            this.a &#x3D; a;</span><br><span class="line">            return function(b) &#123;</span><br><span class="line">                return this.a + b;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;(function(a, b) &#123;</span><br><span class="line">            return a</span><br><span class="line">        &#125;(6, 5)))</span><br><span class="line">        console.log(test(7)); &#x2F;&#x2F;13</span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/08/04/%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%931/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-面试总结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -401,7 +494,7 @@
 <p>59.扁平化数组<br>array.flat<br>json.parse<br>正则表达式<br>push<br>reduce<br>…扩展运算符</p>
 <p>60.vuex<br>State、 Getter、Mutation 、Action<br>页面通过mapAction异步提交事件到action。action通过commit把对应参数同步提交到mutation。mutation会修改state中的值<br>Action 提交的是 mutation，而不是直接变更状态。</p>
 <p>61.触发BFC的方式<br>display为inline-block或table-cell<br>float不是none<br>position absolute或fixed(脱离标准文档流)<br>overflow不是visible</p>
-<p>62.双向数据绑定原理(angular是脏值检测)<br>数据劫持结合发布者订阅者模式，通过Object.defineProperty来劫持各个属性的getter和setter,数据变动时发布消息给订阅者，触发相应的监听回调<br>MVVM作为绑定的入口，整合Observer,Compile和Watcher三者，通过Observer来监听model数据变化，通过Compile来解析模板指令，利用Watcher来搭建起Compile和Observer之间通信的桥梁达到数据变化影响视图，视图交互影响数据的双向数据绑定效果(针对于input等表单控件)</p>
+<p>62.双向数据绑定原理(angular是脏值检测)<br>数据劫持结合发布者订阅者模式，通过Object.defineProperty来劫持各个属性的getter和setter,数据变动时发布消息给订阅者，触发相应的监听回调<br>MVVM作为绑定的入口，整合Observer,Compile和Watcher，dep四者，通过Observer来监听model数据变化，通过Compile来解析模板指令，利用Watcher来搭建起Compile和Observer之间通信的桥梁,dep（发布订阅收集器）是observer和watcher之间的桥梁，达到数据变化影响视图，视图交互影响数据的双向数据绑定效果(针对于input等表单控件)</p>
 <p>63.js轮播图<br>超出部分overflow:hidden<br>动的是图片组，窗口不动<br>图片组的宽度要多算一张(把第一张图片放到最后)</p>
 <p>64.组件传值<br>父传子:父组件v-bind绑定数据，子组件props接收<br>子传父:父组件自定义事件func，子组件通过this.$emit(‘func’)触发父组件的自定义事件<br>子传子:子传父，再父传子或者通过eventbus中转,子组件Bus.$emit(‘zifu’,参数)，子组件Bus.$on(‘zifu’,回调函数)或者vuex</p>
 <p>65.position：relative是相对于元素本来的位置进行定位<br>absolute是相对于父元素来进行定位</p>

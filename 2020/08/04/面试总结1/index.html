@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://gwq132580.github.io">
-  <title>前端面试题1 | Hexo</title>
+  <title>面试总结1 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1.v-if和v-showv-if是真正的条件渲染 是元素的销毁和重建v-show是通过display:none来实现元素的隐藏的v-if的切换开销比较大，v-show的渲染开销大如果元素需要频繁的切换需要v-show,否则v-if 2.样式穿透less&#x2F;sass 父元素 &#x2F;deep&#x2F; 子元素stylus 父元素 &#x2F;deep&#x2F; 子元素 或父元素 &gt;&gt;&gt; 子元素 3.安装fastC">
+  <meta name="description" content="node爬虫ip被封如何处理 伪造ip和请求头 构建一个私人ip代理池， 从各大代理ip网站爬取收集免费的代理ip，然后一一进行测试，从中筛选出高速可用的ip   new RegExp和 &#x2F;&#x2F;的区别 new RegExp可以直接写&#x2F; 而不用 \ &#x2F; 进行转义 注意正则是对象  文件上传 利用input type&#x3D;file 设置accpet解决卡顿问题 将input隐藏，通过一个绑定了点击事件的bu">
 <meta property="og:type" content="article">
-<meta property="og:title" content="前端面试题1">
-<meta property="og:url" content="https://gwq132580.github.io/2020/08/01/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%981/index.html">
+<meta property="og:title" content="面试总结1">
+<meta property="og:url" content="https://gwq132580.github.io/2020/08/04/%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%931/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="1.v-if和v-showv-if是真正的条件渲染 是元素的销毁和重建v-show是通过display:none来实现元素的隐藏的v-if的切换开销比较大，v-show的渲染开销大如果元素需要频繁的切换需要v-show,否则v-if 2.样式穿透less&#x2F;sass 父元素 &#x2F;deep&#x2F; 子元素stylus 父元素 &#x2F;deep&#x2F; 子元素 或父元素 &gt;&gt;&gt; 子元素 3.安装fastC">
+<meta property="og:description" content="node爬虫ip被封如何处理 伪造ip和请求头 构建一个私人ip代理池， 从各大代理ip网站爬取收集免费的代理ip，然后一一进行测试，从中筛选出高速可用的ip   new RegExp和 &#x2F;&#x2F;的区别 new RegExp可以直接写&#x2F; 而不用 \ &#x2F; 进行转义 注意正则是对象  文件上传 利用input type&#x3D;file 设置accpet解决卡顿问题 将input隐藏，通过一个绑定了点击事件的bu">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-08-01T04:48:06.000Z">
-<meta property="article:modified_time" content="2020-08-04T11:53:32.958Z">
+<meta property="article:published_time" content="2020-08-04T08:43:55.000Z">
+<meta property="article:modified_time" content="2020-08-04T15:29:15.081Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -154,97 +154,57 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-前端面试题1" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-面试总结1" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      前端面试题1
+      面试总结1
     </h1>
   
 
         
-        <a href="/2020/08/01/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%981/" class="archive-article-date">
-  	<time datetime="2020-08-01T04:48:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-01</time>
+        <a href="/2020/08/04/%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%931/" class="archive-article-date">
+  	<time datetime="2020-08-04T08:43:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-04</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>1.v-if和v-show<br>v-if是真正的条件渲染 是元素的销毁和重建<br>v-show是通过display:none来实现元素的隐藏的<br>v-if的切换开销比较大，v-show的渲染开销大<br>如果元素需要频繁的切换需要v-show,否则v-if</p>
-<p>2.样式穿透<br>less/sass 父元素 /deep/ 子元素<br>stylus 父元素 /deep/ 子元素 或父元素 &gt;&gt;&gt; 子元素</p>
-<p>3.安装fastClick解决移动端300ms延迟问题</p>
-<p>4.$nextTick<br>可以拿到最新的dom</p>
-<p>5.data为什么必须是函数<br>因为对象是引用类型，修改了组价中的值会影响到其他组件，儿在cli中使用函数则不会出现这个问题</p>
-<p>6.keep-alive的作用<br>是内置组件 用keep-alive包裹router-view则不会重复渲染dom,他把组件的状态保留到了内存中，防止重复渲染</p>
-<p>7.key的作用<br>可以高效的更新虚拟dom,提高性能 diff算法</p>
-<p>8.父向子传值用v-bind 子组件用props接收</p>
-<p>9.子向父传值用$emit(‘函数名’,参数) 父组件用@函数名=function(msg)</p>
-<p>10.兄弟组件传值用eventbus bus.$emit() 和bus.$on</p>
-<p>11.防抖(debounce)和节流(throttle)<br>防抖:触发事件后函数在n秒内只执行一次，如果在该时间内再次触发，则会重新计算函数执行时间(控制次数)<br>节流:连续触发事件，但在n秒内只执行一次(控制效率)</p>
-<p>12.computed和watch区别<br>computed依赖的值发生改变会重新执行函数，不能写异步操作<br>watch侦听的值的改变会重新执行函数，可以写异步操作</p>
-<p>13.git命令<br>git commit -m ‘init my project’<br>git add .<br>git init 初始化<br>git status 查看工作区，暂存区的状态<br>git merge 合并分支<br>git checkout 切换分支<br>git clone 克隆远程仓库</p>
-<p>14.vuex原理<br>redux</p>
-<p>15.canvas</p>
-<p>16.怎么理解前端工程师<br>用户体验要好<br>编写的页面直接和用户面对面，编写页面的时候要先和ui配合，拿到设计图后和后端配合调试好接口，再开始写项目</p>
-<p>17.js数据类型<br>基本数据类型:null,number,boolean,symbol,string,undifined<br>复合数据类型:Date,Function,Array,Object,基本包装类型(Number,String,Boolean)</p>
-<p>18.js发生隐式类型转换的运算符</p>
-<ul>
-<li><ul>
-<li>/ %</li>
+        <h4 id="node爬虫ip被封如何处理"><a href="#node爬虫ip被封如何处理" class="headerlink" title="node爬虫ip被封如何处理"></a>node爬虫ip被封如何处理</h4><ul>
+<li>伪造ip和请求头</li>
+<li>构建一个私人ip代理池， 从各大代理ip网站爬取收集免费的代理ip，然后一一进行测试，从中筛选出高速可用的ip </li>
 </ul>
+<h4 id="new-RegExp和-的区别"><a href="#new-RegExp和-的区别" class="headerlink" title="new RegExp和 //的区别"></a>new RegExp和 //的区别</h4><ul>
+<li>new RegExp可以直接写/ 而不用 \ / 进行转义</li>
+<li>注意正则是对象</li>
+</ul>
+<h4 id="文件上传"><a href="#文件上传" class="headerlink" title="文件上传"></a>文件上传</h4><ul>
+<li>利用input type=file 设置accpet解决卡顿问题</li>
+<li>将input隐藏，通过一个绑定了点击事件的button去触发input,实现只能拍照上传</li>
+</ul>
+<h4 id="单例模式"><a href="#单例模式" class="headerlink" title="单例模式"></a>单例模式</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="comment">//一个类只有一个实例对象</span></span><br><span class="line">            <span class="keyword">if</span> (Person._instance) &#123;</span><br><span class="line">                <span class="keyword">return</span> Person._instance;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">&#x27;第一次创建对象&#x27;</span>);</span><br><span class="line">            Person._instance = <span class="built_in">this</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">var</span> p1 = <span class="keyword">new</span> Person();</span><br><span class="line">        <span class="keyword">var</span> p2 = <span class="keyword">new</span> Person();</span><br><span class="line">        <span class="built_in">console</span>.log(p1 === p2); <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="装饰器的基本使用"><a href="#装饰器的基本使用" class="headerlink" title="装饰器的基本使用"></a>装饰器的基本使用</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;为对象添加新功能，不改变其原有的结构和功能</span><br><span class="line">@Add</span><br><span class="line">@AddInstance</span><br><span class="line"></span><br><span class="line">class Test &#123;&#125;</span><br><span class="line">function Add(target) &#123;</span><br><span class="line">  &#x2F;&#x2F; 给类添加静态方法</span><br><span class="line">  target.hello &#x3D; &quot;world&quot;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">function AddInstance(target)&#123;</span><br><span class="line">  target.prototype.sing&#x3D;()&#x3D;&gt;console.log(&#39;这是实例方法&#39;);</span><br><span class="line">&#125;</span><br><span class="line">console.log(Test.hello);</span><br><span class="line">new Test().sing()</span><br></pre></td></tr></table></figure>
+
+<h4 id="进程和线程"><a href="#进程和线程" class="headerlink" title="进程和线程"></a>进程和线程</h4><p> 进程是分配内存的最小单位，线程是CPU调度的最小单位，进程可以包含多个线程 </p>
+<h4 id="数组和链表数据结构"><a href="#数组和链表数据结构" class="headerlink" title="数组和链表数据结构"></a>数组和链表数据结构</h4><ul>
+<li><p>数组是连续的，链表不要求连续</p>
+</li>
+<li><p>数组查找速度快，插入慢，可能会浪费内存</p>
+</li>
+<li><p>链表查找速度慢，插入速度快，不会浪费内存，链表比较灵活</p>
 </li>
 </ul>
-<p>19.typeof返回的是字符串(注意陷阱)<br>null==undefined<br>typeof null=’object’(历史遗留问题)<br>typeof arr=’object’<br>typeof function=’function’<br>var d;<br>typeof d==undefined是false!!!<br>typeof d==’undefined’是true</p>
-<p>20.undefined和null的区别<br>typeof null=object<br>typepf undefined=undefined<br>undefined表示现在没有，未来也不会有(缺少值)<br>null表示现在没有，未来会有(无的对象)<br>undefined+数字是NaN!!!<br>null+数字是该数字<br>null转化为数值为0，undefined转化为数值是NaN<br>null作为原型链的终点</p>
-<p>21.逻辑运算符<br>&amp;&amp;：左边表达式为真,就返回右边表达式，否则直接返回false<br>||:左边表达式为真，直接返回true,否则看后面的</p>
-<p>22.in的用法<br>key in obj 检测对象是否存在该属性<br>for in 遍历对象或数组</p>
-<p>23.delete关键字的使用<br>用于删除对象中的某个属性<br>还可以删除全局变量，但是不能删除var 定义的变量</p>
-<p>24.break和continue<br>break退出整个循环，执行循环外的代码<br>continue退出当前循环，执行下面的循环</p>
-<p>25.自定义构造函数有默认的返回值，默认返回this<br>可以修改返回值,返回值为值类型时，修改无效，返回值为引用类型时修改有效</p>
-<p>26.instanceof和constructor都能找父亲</p>
-<p>27.in和hasOwnProperty都能检测对象上是否有属性和方法<br>in:能检测公有，也能检测私有<br>hasOwnProperty只能检测私有</p>
-<p>28.检测对象上的某个属性是否在原型对象上(公有)<br>key in obj&amp;&amp;!obj.hasOwnProperty(key)</p>
-<p>29.判断是否是指定实例对象的原型对象<br>Person.prototype.isPrototypeOf(p1)</p>
-<p>30.instanceof判断对象是否在某个构造函数的原型链上</p>
-<p>31.选择器<br>类名选择器 ID选择器  标签选择器  通配符选择器 后代选择器 属性选择器 直接父子选择器  兄弟选择器 分组选择器</p>
-<p>32.设计模式<br>单例模式:一个类仅有一个实例，提供一个访问他的全局访问点<br>策略模式:定义一系列的方法，把它们一个个封装起来，并且使它们可以相互替换<br>迭代器模式:在使用迭代器模式之后，即使不关心对象的内部构造，也可以按顺序访问其中的每个元素(forEach)<br>发布-订阅模式:也称作观察者模式，定义了对象间的一种一对多的依赖关系，当一个对象的状态发生改变时，所有依赖于它的对象都将得到通知<br>工厂模式:解决了创建多个对象的问题,但是没有结解决对象识别的问题(怎样知道一个对象的类型)<br>命名空间模式:</p>
-<p>33.事件委托<br>事件委托就是利用事件冒泡，只指定一个事件处理程序，就可以管理某一类型的所有事件</p>
-<p>34.继承方法<br>混入式继承 浅拷贝<br>原型继承 Child.prototype=Person.prototype<br>原型链继承 Child.protype=new Person()<br>构造函数继承 window.Person.call(this)<br>组合继承 ：构造函数继承+原型链继承<br>es6 extends 继承</p>
-<p>35.创建对象的方式<br>字面量<br>new Object<br>自定义构造函数<br>工厂模式(不知道自己的父类)<br>Object.create() 可以创建没有原型链的对象，提高查询效率<br>Object.assign</p>
-<p>36.Boolean转换为false的有5个，null undefined NaN ‘’ 0<br>基本包装类型typeof 为object</p>
-<p>37.特权方法，在函数内部调用了私有成员的实例方法称为特权方法</p>
-<p>38.this指向<br>普通函数执行的时候this指向window,js文件指向global<br>作为方法调用的时候，指向方法的调用者<br>实例化构造函数的时候，this指向实例化出来的对象<br>call,apply可以改变this指向，this指向传入的第一个参数</p>
-<p>39.全局变量不安全</p>
-<p>40.new.target判断是否使用了new关键字</p>
-<p>41.数组去重<br>1.Array.from(new Set(arr))<br>2.indexOf===-1 就push</p>
-<p>42.全局作用域和函数作用域<br>全局作用域: 函数外部的作用域<br>函数作用域: 函数内部的作用域<br>全局变量: 函数外部定义的变量<br>局部变量: 函数内部定义的变量(形参也是局部变量)，局部变量在使用后就会被销毁</p>
-<p>43.函数提升高于变量提升</p>
-<p>44.网页一打开形成全局作用域</p>
-<p>45.闭包:函数嵌套函数，一个函数访问另一个函数作用域中的变量<br>优点:缓存数据<br>缺点:容易导致内存泄露</p>
-<p>46.content-type<br>定义文件的类型和网页的编码，决定接收方用什么编码读取这个文件</p>
-<p>47.for in 遍历对象 for of遍历数组</p>
-<p>48.window.status用于用来指定浏览器状态栏里的临时消息</p>
-<p>49.防止xss攻击 输入过滤,控制输入字符的长度</p>
-<p>50.typeof NaN==’number’(注意typeof得到的是字符串类型)</p>
-<p>51.new 操作符做了什么<br>新建一个实例对象<br>该对象的constructor属性为该构造函数的名称，该对象的__proto__指向构造函数的prototype<br>将this指向该实例对象<br>将初始化完毕的新对象地址，保存到等号左边的变量中</p>
-<p>52.跨域的方式<br>jsonp(只能进行get请求) nginx代理 proxy代理 cors 后台修改header</p>
-<p>53.window.open  方法用于打开一个新的浏览器窗口或查找一个已命名的窗口。</p>
-<p>54.手机和邮箱的正则表达式<br>/^1[3-9]\d{9}$/   /^[0-9a-zA-Z-<em>]+@[0-9a-zA-Z-</em>]+.[0-9a-zA-Z-_]+$/</p>
-<p>55.数值区间在2-32的随机数组<br>parseInt(31 * Math.random() + 2)</p>
-<p>56.axios底层<br>promise加原生ajax</p>
-<p>57.三次握手和四次挥手</p>
-<p>58.进程和线程的区别<br>进程是操作系统资源分配的基本单位，而线程是任务调度和执行的基本单位</p>
-<p>59.扁平化数组<br>array.flat<br>json.parse<br>正则表达式<br>push<br>reduce<br>…扩展运算符</p>
-<p>60.vuex<br>State、 Getter、Mutation 、Action<br>页面通过mapAction异步提交事件到action。action通过commit把对应参数同步提交到mutation。mutation会修改state中的值<br>Action 提交的是 mutation，而不是直接变更状态。</p>
-<p>61.触发BFC的方式<br>display为inline-block或table-cell<br>float不是none<br>position absolute或fixed(脱离标准文档流)<br>overflow不是visible</p>
-<p>62.双向数据绑定原理(angular是脏值检测)<br>数据劫持结合发布者订阅者模式，通过Object.defineProperty来劫持各个属性的getter和setter,数据变动时发布消息给订阅者，触发相应的监听回调<br>MVVM作为绑定的入口，整合Observer,Compile和Watcher，dep四者，通过Observer来监听model数据变化，通过Compile来解析模板指令，利用Watcher来搭建起Compile和Observer之间通信的桥梁,dep（发布订阅收集器）是observer和watcher之间的桥梁，达到数据变化影响视图，视图交互影响数据的双向数据绑定效果(针对于input等表单控件)</p>
-<p>63.js轮播图<br>超出部分overflow:hidden<br>动的是图片组，窗口不动<br>图片组的宽度要多算一张(把第一张图片放到最后)</p>
-<p>64.组件传值<br>父传子:父组件v-bind绑定数据，子组件props接收<br>子传父:父组件自定义事件func，子组件通过this.$emit(‘func’)触发父组件的自定义事件<br>子传子:子传父，再父传子或者通过eventbus中转,子组件Bus.$emit(‘zifu’,参数)，子组件Bus.$on(‘zifu’,回调函数)或者vuex</p>
-<p>65.position：relative是相对于元素本来的位置进行定位<br>absolute是相对于父元素来进行定位</p>
+<h4 id="v-for和v-if一起使用会导致v-if失效-v-for优先级较高"><a href="#v-for和v-if一起使用会导致v-if失效-v-for优先级较高" class="headerlink" title="v-for和v-if一起使用会导致v-if失效,v-for优先级较高"></a>v-for和v-if一起使用会导致v-if失效,v-for优先级较高</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">10</span>;</span><br><span class="line">         a.pro = <span class="number">10</span>;</span><br><span class="line">      <span class="built_in">console</span>.log(a); <span class="comment">//10</span></span><br><span class="line">      <span class="built_in">console</span>.log(a.pro); <span class="comment">//undefined</span></span><br><span class="line">      <span class="built_in">console</span>.log(a.pro + a); <span class="comment">//NaN</span></span><br><span class="line">      <span class="keyword">var</span> s = <span class="string">&#x27;hello&#x27;</span>;</span><br><span class="line">      s.pro = <span class="string">&#x27;world&#x27;</span>;</span><br><span class="line">      <span class="built_in">console</span>.log(s.pro + s); <span class="comment">//undefinedhello</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var test &#x3D; (function(a) &#123;</span><br><span class="line">            this.a &#x3D; a;</span><br><span class="line">            return function(b) &#123;</span><br><span class="line">                return this.a + b;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;(function(a, b) &#123;</span><br><span class="line">            return a</span><br><span class="line">        &#125;(6, 5)))</span><br><span class="line">        console.log(test(7)); &#x2F;&#x2F;13</span><br></pre></td></tr></table></figure>
+
 
       
 
@@ -324,7 +284,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://gwq132580.github.io/2020/08/01/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%981/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://gwq132580.github.io/2020/08/04/%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%931/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -338,18 +298,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/08/02/Angular-%E7%BB%84%E4%BB%B6%E4%B9%8B%E9%97%B4%E7%9A%84%E9%80%9A%E4%BF%A1/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Angular 组件之间的通信
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/08/01/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
+    <a href="/2020/08/03/%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">面试总结</div>
       <i class="icon-circle-right"></i>
     </a>
   
