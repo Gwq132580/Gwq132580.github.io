@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="https://gwq132580.github.io">
   <title>面试总结2 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="作用域链​    内部环境可以访问外部环境的变量和方法，而外部环境不行，可以通过定义函数来延长作用域链 vue路由跳转 router-link this.$router.push() this.$router.go(n)  向前或向后跳转n个页面 this.$router.replace() 同push">
+  <meta name="description" content="作用域链​    内部环境可以访问外部环境的变量和方法，而外部环境不行，可以通过定义函数来延长作用域链 vue路由跳转 router-link this.$router.push() this.$router.go(n)  向前或向后跳转n个页面 this.$router.replace() 同push  position absolute相对于谁定位​    相对于父级非static 定位 若没">
 <meta property="og:type" content="article">
 <meta property="og:title" content="面试总结2">
 <meta property="og:url" content="https://gwq132580.github.io/2020/08/05/%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%932/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="作用域链​    内部环境可以访问外部环境的变量和方法，而外部环境不行，可以通过定义函数来延长作用域链 vue路由跳转 router-link this.$router.push() this.$router.go(n)  向前或向后跳转n个页面 this.$router.replace() 同push">
+<meta property="og:description" content="作用域链​    内部环境可以访问外部环境的变量和方法，而外部环境不行，可以通过定义函数来延长作用域链 vue路由跳转 router-link this.$router.push() this.$router.go(n)  向前或向后跳转n个页面 this.$router.replace() 同push  position absolute相对于谁定位​    相对于父级非static 定位 若没">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-08-05T02:41:20.000Z">
-<meta property="article:modified_time" content="2020-08-05T15:50:46.333Z">
+<meta property="article:modified_time" content="2020-08-06T15:09:14.879Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -181,7 +181,44 @@
 <li>this.$router.go(n)  向前或向后跳转n个页面</li>
 <li>this.$router.replace() 同push</li>
 </ul>
-
+<h4 id="position-absolute相对于谁定位"><a href="#position-absolute相对于谁定位" class="headerlink" title="position absolute相对于谁定位"></a>position absolute相对于谁定位</h4><p>​    相对于父级非static 定位 若没有则相当于body定位</p>
+<h4 id="盒子模型margin叠加如何解决"><a href="#盒子模型margin叠加如何解决" class="headerlink" title="盒子模型margin叠加如何解决"></a>盒子模型margin叠加如何解决</h4><ul>
+<li>给父元素添加border</li>
+<li>给父元素加padding</li>
+<li>给父元素添加overflow:hidden</li>
+</ul>
+<h4 id="git版本冲突"><a href="#git版本冲突" class="headerlink" title="git版本冲突"></a>git版本冲突</h4><p>​     回滚：git reset –hard 139dcfaa558e3276b30b6b2e5cbbb9c00bbdca96  </p>
+<p>​     git add . </p>
+<p>​     git commit -m “提交的消息” </p>
+<pre><code> git push -f  </code></pre>
+<h4 id="vue-seo优化"><a href="#vue-seo优化" class="headerlink" title="vue seo优化"></a>vue seo优化</h4><ul>
+<li>服务端渲染</li>
+<li>prerender-spa-plugin插件实现预渲染</li>
+</ul>
+<h4 id="转换盒子模型"><a href="#转换盒子模型" class="headerlink" title="转换盒子模型"></a>转换盒子模型</h4><ul>
+<li>box-sizing:border-box 怪异盒子模型</li>
+<li>box-sizing:content-box 标准盒子模型</li>
+</ul>
+<h4 id="http状态码"><a href="#http状态码" class="headerlink" title="http状态码"></a>http状态码</h4><ul>
+<li>1**:等待</li>
+<li>200：ok</li>
+<li>301:永久重定向 302:临时重定向 303:查看其它地址，类似301 304：未修改</li>
+<li>404：请求的资源不存在</li>
+<li>503： 由于超载或系统维护，服务器暂时的无法处理客户端的请求 </li>
+</ul>
+<h4 id="301和302的区别"><a href="#301和302的区别" class="headerlink" title="301和302的区别"></a>301和302的区别</h4><p> 实施301后，新网址完全继承旧网址，旧网址的排名等完全清零；实施302后，对旧网址没有影响，但新网址不会有排名。</p>
+<h4 id="e-target和e-currentTarget区别"><a href="#e-target和e-currentTarget区别" class="headerlink" title="e.target和e.currentTarget区别"></a>e.target和e.currentTarget区别</h4><p>​     e.currentTarget：指的是注册事件对象 </p>
+<p>​     e.target：指的是实际触发事件的对象  </p>
+<p>​    点击ul,target和currentTarget均指向ul节点</p>
+<p>​    点击li时，target指向li,currentTarget指向ul节点</p>
+<h4 id="dom渲染流程"><a href="#dom渲染流程" class="headerlink" title="dom渲染流程"></a>dom渲染流程</h4><ul>
+<li>解析html源码，然后创建一个dom树，在dom树中，每个html标签对应一个元素节点，并且每个文本都对应一个文本节点，根节点就是documentElement元素，对应html标签</li>
+<li>浏览器解析css代码，计算出样式数据，对非法的语法会直接忽略掉，解析css有顺序：浏览器默认设置、用户设置 、外联样式，内联样式，html中的style(嵌在标签中的行间样式)。 </li>
+<li>构建渲染树</li>
+<li>绘制到屏幕上</li>
+</ul>
+<h4 id="阻止冒泡方法"><a href="#阻止冒泡方法" class="headerlink" title="阻止冒泡方法"></a>阻止冒泡方法</h4><p>​    e.stopPropgation和e.cancleBubble=true vue里的.stop</p>
+<h4 id="前端工程化"><a href="#前端工程化" class="headerlink" title="前端工程化"></a>前端工程化</h4>
       
 
       
