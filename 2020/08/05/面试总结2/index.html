@@ -15,10 +15,12 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="作用域链​    内部环境可以访问外部环境的变量和方法，而外部环境不行，可以通过定义函数来延长作用域链 vue路由跳转 router-link this.$router.push() this.$router.go(n)  向前或向后跳转n个页面 this.$router.replace() 同push  position absolute相对于谁定位​    相对于父级非static 定位 若没">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="d:/新桌面/1574127934626830.jpg">
 <meta property="article:published_time" content="2020-08-05T02:41:20.000Z">
-<meta property="article:modified_time" content="2020-08-06T15:09:14.879Z">
+<meta property="article:modified_time" content="2020-08-07T03:48:49.478Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="d:/新桌面/1574127934626830.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -218,7 +220,19 @@
 <li>绘制到屏幕上</li>
 </ul>
 <h4 id="阻止冒泡方法"><a href="#阻止冒泡方法" class="headerlink" title="阻止冒泡方法"></a>阻止冒泡方法</h4><p>​    e.stopPropgation和e.cancleBubble=true vue里的.stop</p>
-<h4 id="前端工程化"><a href="#前端工程化" class="headerlink" title="前端工程化"></a>前端工程化</h4>
+<h4 id="前端工程化"><a href="#前端工程化" class="headerlink" title="前端工程化"></a>前端工程化</h4><ul>
+<li><p><strong>当前环境？</strong></p>
+<p> 目前来说，web业务日益复杂化和多元化，前端开发从webpage模式为主转变为webapp模式为主，前端的开发工作在某些<br>场景下被认为是日常的一项简单工作，或者是某个项目的附属品，而没有看成一个软件被认真对待。<br>在模式的转变下，前端工程化日益复杂，会产生很多问题：<br>例如 如何进行高效的多人协作，如何保证项目的可维护性，如何提高项目的开发质量，如何降低项目的生产风险。<br>前端工程化是根据软件工程的技术和方法对前端的工具，技术，开发流程，经验等进行规范，使其更具规范化和标准化<br>，其目的是提高开发效率和降低生产成本，即提高开发过程的开发效率，减少重复的开发时间，其实前端工程化是软件<br>工程的一部分，可以从理解软件工程的角度去探讨。</p>
+<p><strong>什么是前端工程化？</strong></p>
+<p>前端工程化里的工程是一个很大的概念，甚至创建一个git仓库，也可以理解为创建了一个工程，软件工程的定义是运<br>用计算机科学的理论和技术，以及工程管理的原则和方法，按进度和预算，实现满足用户要求的软件产品的定义，开发<br>和维护的工程以及研究的学科。<br>前端工程化是为了让前端可以自成体系，具体可以从四方面去讨论，模块化，组件化，规范化和自动化。</p>
+<p><strong>模块化？</strong><br>模块化：将大的文件拆分成互相依赖的小文件，再进行统一的拼装和加载。<br>js的模块化：利用webpack+babel的模式将所有模块系统进行打包，同步加载，也可以搭乘多个chunk异步加载。<br>利用浏览器的script标签，type类型选modules类型即可。<br>css模块化：之前的sass less 等预处理器虽然实现了css的拆分，但是并没有解决模块化很重要的一个问题，即选择器<br>的全局污染问题。有三种解决办法，第一种是利用webcomponents的技术实现，这个技术虽然解决了全局污染问题，但<br>是由于兼容性问题，目前用的不多，第二种是css in js 将css的技术全部摒弃，利用js或者json格式去加载css，这种<br>方式简单粗暴，并且不容易处理伪类选择器的问题，被大众所认可的是第三种解决方案，即 css modules ，所有的css<br>文件由js来管理，这种技术最大程度利用了css的生态和模块化的原则，其中vue中的scoped 就是这种技术的提现。<br>资源的模块化：webpack的成功不仅仅是因为将js系统进行模块化处理，而是它的模块化原理，即任何资源都可以模块<br>化且应该模块化处理，优点有以下三点，1：目录结构清晰化，2：资源处理集成化，3：项目依赖单一化。</p>
+<p><strong>组件化？</strong><br>组件化：将UI页面拆分正有模板+样式+逻辑组成的功能单元，称为组件，组件化不等于模块化，模块化是在资源和代码<br>方面对文件的拆分，而组件化是在UI层面进行的拆分。<br>传统前端框架的思想是以dom优先，先操作dom，再写出可复用的逻辑单元来操作dom，而组件化框架是组件优先，将dom<br>和与之一起的逻辑组成一个组件，再进行引用。<br>我们封装了组件后，还需要对组件间的关系进行判定，例如继承，扩展，嵌套，包含等，这些关系统称为依赖</p>
+<p><strong>规范化？</strong><br>规范化：规范化是前端工程化很重要的一部分，项目前期规范制定的好坏，直接决定后期的开发质量，分为<br>项目目录规范化，编码规范化，前后端接口规范化，git分支管理，commit描述规范，组件管理等编码规范化分为html css js img 命名规范这几类 接口规范，目的是规则先行，以减少联调中不必要的问题和麻烦，自责划分 前端，渲染<br>逻辑和交互逻辑，后台，处理业务逻辑，各种格式的规定，例如 json尽量简洁轻量，日期尽量字符串，等等。</p>
+<p><strong>自动化？</strong><br>自动化：让简单重复的工作交给机器完成，例如自动化测试，自动化部署，自动化构建，持续继承等。</p>
+</li>
+</ul>
+<h4 id="mongodb和mysql区别"><a href="#mongodb和mysql区别" class="headerlink" title="mongodb和mysql区别"></a>mongodb和mysql区别</h4><p>​    <img src="D:\新桌面\1574127934626830.jpg" alt="1574127934626830"></p>
+
       
 
       
