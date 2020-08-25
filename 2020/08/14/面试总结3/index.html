@@ -16,7 +16,7 @@
 <meta property="og:description" content="cmd和amd amd推崇依赖前置，模块加载后立即执行，用户体验好，典型的实现是require Js cms推崇依赖就近，模块加载后不是立即执行，性能高些，典型的实现是 sea.js  ajax原理 Ajax的工作原理相当于在用户和服务器之间加了—个中间层(AJAX引擎),使用户操作与服务器响应异步化。并不是所有的用户请求都提交给服务器,像—些数据验证和数据处理等都交给Ajax引擎自己来做, 只有">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-08-14T10:09:56.000Z">
-<meta property="article:modified_time" content="2020-08-15T08:48:03.032Z">
+<meta property="article:modified_time" content="2020-08-25T09:12:37.274Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -237,6 +237,110 @@
 </ul>
 <h2 id="防抖和节流"><a href="#防抖和节流" class="headerlink" title="防抖和节流"></a>防抖和节流</h2><ul>
 <li>防抖是将多次执行变为最后一次执行，节流是将多次执行变成每隔一段时间执行。</li>
+</ul>
+<h2 id="跨域是什么"><a href="#跨域是什么" class="headerlink" title="跨域是什么"></a>跨域是什么</h2><p>​    跨域是指浏览器不能执行其他网站的脚本。它是由浏览器的同源策略造成的，是浏览器施加的安全限制</p>
+<h2 id="单页面路由原理"><a href="#单页面路由原理" class="headerlink" title="单页面路由原理"></a>单页面路由原理</h2><p>​    前端路由本质是监听url变化，匹配路由规则，显示对应的页面，页面无需刷新</p>
+<h2 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h2><ul>
+<li>选择排序，最坏，最好，平均时间复杂度都是nlogn,不稳定排序</li>
+<li>堆是具有以下性质的完全二叉树：每个结点的值都大于或等于其左右孩子结点的值，称为大顶堆；或者每个结点的值都小于或等于其左右孩子结点的值，称为小顶堆。</li>
+<li>升序：大顶堆 降序：小顶堆</li>
+<li>将无需序列构建成一个堆，根据升序降序需求选择大顶堆或小顶堆</li>
+<li>将堆顶元素与末尾元素交换，将最大元素”沉”到数组末端</li>
+<li>重新调整结构，使其满足堆定义，然后继续交换堆顶元素与当前末尾元素，反复执行调整+交换步骤，直到整个序列有序。</li>
+</ul>
+<h2 id="提升页面性能"><a href="#提升页面性能" class="headerlink" title="提升页面性能"></a>提升页面性能</h2><ul>
+<li>静态资源压缩合并，减少http请求。 </li>
+<li>使用浏览器缓存</li>
+<li>使用cdn资源</li>
+<li>使用c3动画开启硬件加速</li>
+<li>适当使用touch事件代替click事件。 </li>
+<li>合理使用requestAnimationFrame动画代替setTimeout </li>
+<li>少用全局变量 、 避免全局查询 、多个变量声明合并 </li>
+<li>防抖和节流</li>
+<li>减少dom操作</li>
+<li>懒加载</li>
+<li>预解析dns</li>
+<li>ssr后端渲染</li>
+</ul>
+<h2 id="首屏加载优化"><a href="#首屏加载优化" class="headerlink" title="首屏加载优化"></a>首屏加载优化</h2><ul>
+<li>首页单独做服务端渲染</li>
+<li>首页加个好看的loading动画阻塞一下</li>
+<li>开启gzip压缩  前端将文件打包成.gz文件，然后通过nginx的配置，让浏览器直接解析.gz文件。 </li>
+<li>关闭sourcemap</li>
+<li>不打包库文件，单独加载</li>
+<li>异步路由加载</li>
+</ul>
+<h2 id="如何拉取最新的js"><a href="#如何拉取最新的js" class="headerlink" title="如何拉取最新的js"></a>如何拉取最新的js</h2><ul>
+<li>在url请求参数里传递一个版本号</li>
+<li>将版本号写在文件名里</li>
+</ul>
+<h2 id="为何img-input等元素可以设置宽高"><a href="#为何img-input等元素可以设置宽高" class="headerlink" title="为何img,input等元素可以设置宽高"></a>为何img,input等元素可以设置宽高</h2><ul>
+<li>替换元素: 浏览器根据元素的标签和属性，来决定元素的具体显示内容 ,img通过src显示图片，input通过type决定显示哪种类型的输入框</li>
+<li>替换元素有内在尺寸，可以设置宽高</li>
+</ul>
+<h2 id="cookie-localStorage-sessionStorage"><a href="#cookie-localStorage-sessionStorage" class="headerlink" title="cookie,localStorage,sessionStorage"></a>cookie,localStorage,sessionStorage</h2><ul>
+<li>localstorage是持久化存储，除非用户自己删除，而且相同浏览器的不同页面可以共享，存放数据大小一般为5mb,不参与和服务端的通信</li>
+<li>sessionstorage在当前会话下有效，页面关闭就会消失，存放数据大小为5mb，不参与和服务端的通信</li>
+<li>cookie在过期时间前一直有效，即使浏览器关闭，存放数据大小为4k左右，有个数限制，一般不超过20个，可以与服务端通信，每次都会携带在http请求头中，高扩展性和高可用性，容易被劫持，一般放一些不敏感的数据，可以加密</li>
+</ul>
+<h2 id="meta标签的作用"><a href="#meta标签的作用" class="headerlink" title="meta标签的作用"></a>meta标签的作用</h2><ul>
+<li><p>charset表示页面使用的字符集</p>
+</li>
+<li><p>META标签用来描述一个HTML网页文档的属性，例如作者、日期和时间、网页描述、关键词、页面刷新等 </p>
+</li>
+<li><meta http-equiv="Content-Type" content="text/html; charset=gb2312">  
+</li>
+<li><p>viewport设置页面的缩放比，最大宽高</p>
+</li>
+</ul>
+<h2 id="symbol"><a href="#symbol" class="headerlink" title="symbol"></a>symbol</h2><ul>
+<li>symbol可以作为属性名，不用担心命名冲突</li>
+<li><code>var</code> <code>mySymbol = Symbol();</code> </li>
+<li>每个 Symbol 都是独一无二的，不与其它 Symbol 重复 </li>
+</ul>
+<h2 id="文本溢出省略号"><a href="#文本溢出省略号" class="headerlink" title="文本溢出省略号"></a>文本溢出省略号</h2><ul>
+<li>overflow:hidden</li>
+<li>text-overflow:ellipsis</li>
+<li>white-space:nowrap</li>
+</ul>
+<h2 id="如何避免商品价格不被爬取到"><a href="#如何避免商品价格不被爬取到" class="headerlink" title="如何避免商品价格不被爬取到"></a>如何避免商品价格不被爬取到</h2><ul>
+<li>价格信息ajax获取</li>
+<li>价格设置图片</li>
+<li>js对价格加密再解密</li>
+<li>字体加密，自己设计字体</li>
+</ul>
+<h2 id="script放在页面的底部"><a href="#script放在页面的底部" class="headerlink" title="script放在页面的底部"></a>script放在页面的底部</h2><ul>
+<li>如果放在前面，dom还没有加载完毕，此时进行dom操作，会拿到空值，可以使用window.onload解决</li>
+<li>js文件加载后会立即执行，可能会导致页面变白，下载完成后才会显示页面，用户体验不好</li>
+</ul>
+<h2 id="http1-http1-1-http2"><a href="#http1-http1-1-http2" class="headerlink" title="http1,http1.1,http2"></a>http1,http1.1,http2</h2><ul>
+<li>http1连接无法复用，每次请求和响应需要一个单独的连接，上一次请求和下一次请求完全分离，请求方式，get,post,head</li>
+<li>http1.1支持持久连接，在一个tcp连接上可以传送多个http请求，减少了建立和关闭连接的时延，不用上一次请求结果返回就能发出下一次请求，但服务器必须依次回送响应结果,请求方式 put,delete,connect,options,trace</li>
+<li>http2采用二进制格式传输数据，对消息头进行压缩传输，节流，多路复用，所有的请求都是通过一个tcp连接完成的，服务端能够更快的把资源推送回客户端</li>
+</ul>
+<h2 id="图片预览"><a href="#图片预览" class="headerlink" title="图片预览"></a>图片预览</h2><ul>
+<li>实例化fileReader对象 、获取文本框的dom.files、调用fileReader的readAsDataUrl方法(file[0])、监听fileReader的onload事件，给图片的src赋值为.result</li>
+</ul>
+<h2 id="图片的上传前后端"><a href="#图片的上传前后端" class="headerlink" title="图片的上传前后端"></a>图片的上传前后端</h2><ul>
+<li><p>表单上传</p>
+<ul>
+<li>方式为post</li>
+<li>enctype为 multipart/form-data </li>
+<li>后端将数据先读出来再写入文件</li>
+</ul>
+</li>
+<li><p>input监听change事件</p>
+<ul>
+<li>实例化formData对象</li>
+<li>发起ajax请求</li>
+</ul>
+<h2 id="session和cookie"><a href="#session和cookie" class="headerlink" title="session和cookie"></a>session和cookie</h2><ul>
+<li>session和cookie都是由服务端生成，都是键值对应的， session保留在服务器，sessionId会返回给客户端，cookie会返回给客户端，下次请求的时候,会带上那个cookie</li>
+<li>sessionId是服务端用来识别，读取服务器上存储的session的一个标志字段</li>
+<li>cookie有生命周期</li>
+<li>客户端进程关闭，sessionId丢失</li>
+</ul>
+</li>
 </ul>
 
       
